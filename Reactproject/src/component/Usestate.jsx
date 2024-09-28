@@ -7,11 +7,12 @@ export default function Usestate() {
     const reducer = (state, action) => {
         switch (action.type) {
             case 'increment':
+                 console.log("the value is incremented");
                 return state + 1;
-                console.log("the value is incremented");
             case 'decrement':
-                return state - 1
                 console.log("the value is decremented");
+                return state - 1
+                
             default:
                 return state
         }
