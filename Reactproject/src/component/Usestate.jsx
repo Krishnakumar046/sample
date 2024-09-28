@@ -1,4 +1,5 @@
 import React, { useCallback, useReducer, useState } from 'react'
+import UseEffect from './UseEffect';
 
 export default function Usestate() {
     const [count, setCount] = useState(0);
@@ -26,6 +27,7 @@ export default function Usestate() {
             <p>Count: {state}</p>
             <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
             <button onClick={() => dispatch({ type: 'decrement' })}>decrement</button>
+            <UseEffect />
 
         </div>
     )
