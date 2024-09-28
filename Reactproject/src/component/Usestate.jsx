@@ -8,8 +8,10 @@ export default function Usestate() {
         switch (action.type) {
             case 'increment':
                 return state + 1;
+                console.log("the value is incremented");
             case 'decrement':
                 return state - 1
+                 console.log("the value is decremented");
             default:
                 return state
         }
