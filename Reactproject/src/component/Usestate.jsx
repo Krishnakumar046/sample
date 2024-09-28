@@ -1,22 +1,23 @@
-import React, { useReducer, useState } from 'react'
+import React, { useCallback, useReducer, useState } from 'react'
 
 export default function Usestate() {
     const [count, setCount] = useState(0);
 
 
-    const reducer = (state, action) => {
+    const reducer = useCallback((state, action) => {
         switch (action.type) {
             case 'increment':
-                 console.log("the value is incremented");
+                console.log("the value is incremented");
                 return state + 1;
             case 'decrement':
                 console.log("the value is decremented");
                 return state - 1
-                
+
             default:
                 return state
         }
-    }
+    }, [count]);
+
     const [state, dispatch] = useReducer(reducer, count);
 
 
